@@ -1,1 +1,13 @@
+server.port = 8004
 
+spring.datasource.url=jdbc:postgresql://localhost:5433/organization_db
+spring.datasource.username=user
+spring.datasource.password=password
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.show-sql=true
+spring.jpa.properties.format_sql=true
+
+eureka.instance.client.serverUrl.defaultZone=http://localhost:8761/eureka/
+
+management.tracing.sampling.probability=1.0
+logging.pattern.level=%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]
